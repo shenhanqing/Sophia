@@ -1,0 +1,579 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Calibri, 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #131C26;
+    background-color: #fff;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #131C26;
+}
+
+h1 {
+    font-size: 30px; /* Title Large */
+}
+
+h2 {
+    font-size: 22px; /* Title */
+}
+
+h3 {
+    font-size: 18px; /* Subtitle */
+    font-family: 'Comfortaa', Arial, sans-serif;
+    font-weight: normal;
+}
+
+.body-large {
+    font-family: Calibri, 'Segoe UI', Arial, sans-serif;
+    font-size: 20px; /* Body Large */
+}
+
+.body-strong {
+    font-family: Calibri, 'Segoe UI', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px; /* Body Strong */
+}
+
+body {
+    font-family: Calibri, 'Segoe UI', Arial, sans-serif;
+    font-size: 16px; /* Body */
+}
+
+.caption {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 13px; /* Captions */
+    font-weight: bold;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+header {
+    background-color: #2E4057;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    height: 60px;
+    margin-right: 15px;
+}
+
+.logo-container h1 {
+    color: #fff;
+    margin: 0;
+}
+
+#main-nav {
+    margin-top: 15px;
+}
+
+#main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+#main-nav li {
+    padding: 0;
+    flex: 1;
+    text-align: center;
+}
+
+#main-nav a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+#main-nav a:hover, #main-nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content Styles */
+main {
+    padding: 40px 0;
+    min-height: 70vh;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #2E4057;
+    border-bottom: 2px solid #2E4057;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Homepage Specific Styles */
+#main-banner {
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+#main-banner img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s;
+}
+
+#main-banner:hover img {
+    transform: scale(1.02);
+}
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.book-item {
+    flex-basis: calc(50% - 10px);
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.book-item h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Gallery Page Specific Styles */
+#view-cart-btn {
+    background-color: #2E4057;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#view-cart-btn:hover {
+    background-color: #3a506b;
+}
+
+#filter-section {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-btn {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #2E4057;
+    color: white;
+}
+
+#books-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#books-table th, #books-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#books-table th {
+    background-color: #2E4057;
+    color: white;
+}
+
+#books-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.add-to-cart {
+    background-color: #2E4057;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #3a506b;
+}
+
+/* Cart Modal */
+#cart-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#cart-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#cart-items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#cart-items th, #cart-items td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#cart-items th {
+    background-color: #f1f1f1;
+}
+
+#cart-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#cart-buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#clear-cart {
+    background-color: #f44336;
+    color: white;
+}
+
+#process-order {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#close-cart {
+    background-color: #ccc;
+}
+
+/* About Us Page Specific Styles */
+#our-team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.team-member {
+    flex-basis: calc(50% - 20px);
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #2E4057;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #3a506b;
+}
+
+/* Contact Page Specific Styles */
+.testimonial {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid #2E4057;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.author {
+    text-align: right;
+    font-weight: bold;
+}
+
+.community-item, .event-item, .collaboration-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.event-date {
+    font-weight: bold;
+    color: #2E4057;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2E4057;
+    color: white;
+    padding: 40px 0 20px;
+}
+
+footer h3 {
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+#newsletter, #social-media, #footer-nav, #contact-info, #hours {
+    margin-bottom: 30px;
+}
+
+#newsletter-form {
+    display: flex;
+    margin-top: 15px;
+}
+
+#newsletter-form input[type="email"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+#newsletter-form button {
+    background-color: #131C26;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+/* Accessibility Enhancements */
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+    outline: 3px solid #4CAF50;
+    outline-offset: 2px;
+}
+
+/* Skip to content link for screen readers */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #2E4057;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Responsive Web Design */
+@media screen and (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .logo-container {
+        margin-bottom: 0;
+    }
+
+    #main-nav {
+        margin-top: 0;
+    }
+
+    #main-nav ul {
+        justify-content: flex-end;
+    }
+
+    .book-item {
+        flex-basis: calc(25% - 15px);
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 40px;
+    }
+
+    #newsletter {
+        grid-column: span 3;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .book-container {
+        flex-direction: column;
+    }
+
+    .book-item {
+        margin-bottom: 20px;
+    }
+
+    #books-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .team-member {
+        flex-basis: 100%;
+    }
+
+    #newsletter-form {
+        flex-direction: column;
+    }
+
+    #newsletter-form input[type="email"] {
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    #newsletter-form button {
+        border-radius: 4px;
+    }
+}
