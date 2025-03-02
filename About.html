@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven Bookstore - About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for Comfortaa -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Skip to content link for accessibility -->
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<!-- Header Section -->
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="Book Haven Logo" id="logo">
+        <h1>Book Haven</h1>
+    </div>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<main id="main-content" class="container">
+    <h1>About Us</h1>
+
+    <!-- Our Story Section -->
+    <section id="our-story">
+        <h2>Our Story</h2>
+        <p>Founded in 2010, Book Haven has been a cornerstone of literary culture in our community for over a decade. We are passionate about books and believe in the power of literature to inspire, educate, and transform lives.</p>
+        <p>What started as a small family-owned bookshop has grown into a beloved community space where book enthusiasts gather to discover new worlds, exchange ideas, and foster a love for reading.</p>
+        <p>At Book Haven, we pride ourselves on our carefully curated selection of books, magazines, journals, and office supplies. Whether you're an avid reader, a student, or simply looking for high-quality reading materials, we have something for everyone.</p>
+    </section>
+
+    <!-- Business Hours Section -->
+    <section id="business-hours">
+        <h2>Hours of Operation</h2>
+        <ul>
+            <li>Monday–Friday: 9 a.m. to 8 p.m.</li>
+            <li>Saturday: 10 a.m. to 6 p.m.</li>
+            <li>Sunday: 11 a.m. to 5 p.m.</li>
+        </ul>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="our-team">
+        <h2>Our Team</h2>
+        <div class="team-member">
+            <img src="jane-smith.png" alt="Jane Smith" class="team-photo">
+            <h3>Jane Smith</h3>
+            <p>Owner</p>
+            <p>Book enthusiast since childhood</p>
+        </div>
+        <div class="team-member">
+            <img src="john-doe.png" alt="John Doe" class="team-photo">
+            <h3>John Doe</h3>
+            <p>Manager</p>
+            <p>Library critic and literature expert</p>
+        </div>
+    </section>
+
+    <!-- Feedback and Custom Order Form -->
+    <section id="feedback-form">
+        <h2>Feedback & Custom Orders</h2>
+        <p>We value your feedback and are happy to help with special book requests. Please fill out the form below:</p>
+
+        <form id="customer-feedback-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone (optional):</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="feedback-type">Type:</label>
+                <select id="feedback-type" name="feedback-type">
+                    <option value="feedback">General Feedback</option>
+                    <option value="special-order">Special Order Request</option>
+                    <option value="suggestion">Suggestion</option>
+                    <option value="complaint">Complaint</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="subscribe">
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                    Subscribe to our newsletter
+                </label>
+            </div>
+
+            <button type="submit" id="submit-feedback">Submit</button>
+        </form>
+    </section>
+</main>
+
+<!-- Footer Section -->
+<footer>
+    <div id="newsletter">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form id="newsletter-form">
+            <input type="email" id="footer-email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+    <div id="social-media">
+        <h3>Follow Us</h3>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+        </ul>
+    </div>
+
+    <div id="footer-nav">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="contact-info">
+        <h3>Contact Us</h3>
+        <p>Phone: 123-456-7890</p>
+        <p>Email: info@bookhaven.com</p>
+        <p>&copy; 2025 Book Haven Bookstore</p>
+    </div>
+
+    <div id="hours">
+        <h3>Hours of Operation</h3>
+        <ul>
+            <li>Monday–Friday: 9 a.m. to 8 p.m.</li>
+            <li>Saturday: 10 a.m. to 6 p.m.</li>
+            <li>Sunday: 11 a.m. to 5 p.m.</li>
+        </ul>
+    </div>
+</footer>
+
+<!-- External JavaScript -->
+<script src="scripts.js"></script>
+
+<!-- Page-specific JavaScript -->
+<script>
+    // Ensure feedback form and newsletter subscription work properly on this page
+    document.addEventListener('DOMContentLoaded', function() {
+        // Feedback form functionality
+        const feedbackForm = document.getElementById('customer-feedback-form');
+        if (feedbackForm) {
+            feedbackForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const feedbackType = document.getElementById('feedback-type').value;
+                const message = document.getElementById('message').value;
+                const subscribe = document.getElementById('subscribe').checked;
+
+                // Create feedback object
+                const feedback = {
+                    name,
+                    email,
+                    phone,
+                    feedbackType,
+                    message,
+                    subscribe,
+                    date: new Date().toISOString()
+                };
+
+                // Get existing feedback from localStorage or create an empty array
+                const existingFeedback = JSON.parse(localStorage.getItem('bookHavenFeedback')) || [];
+
+                // Add new feedback to array
+                existingFeedback.push(feedback);
+
+                // Save to localStorage
+                localStorage.setItem('bookHavenFeedback', JSON.stringify(existingFeedback));
+
+                // Handle subscription if opted in
+                if (subscribe) {
+                    const subscribers = JSON.parse(localStorage.getItem('bookHavenSubscribers')) || [];
+                    if (!subscribers.includes(email)) {
+                        subscribers.push(email);
+                        localStorage.setItem('bookHavenSubscribers', JSON.stringify(subscribers));
+                    }
+                }
+
+                // Show confirmation message
+                alert("Thank you for your message!");
+
+                // Reset form
+                this.reset();
+            });
+        }
+
+        // Newsletter form functionality
+        const newsletterForm = document.getElementById('newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const emailInput = this.querySelector('input[type="email"]');
+                const email = emailInput.value.trim();
+
+                if (email) {
+                    // Store in localStorage
+                    const subscribers = JSON.parse(localStorage.getItem('bookHavenSubscribers')) || [];
+                    if (!subscribers.includes(email)) {
+                        subscribers.push(email);
+                        localStorage.setItem('bookHavenSubscribers', JSON.stringify(subscribers));
+                    }
+
+                    // Show alert
+                    alert("Thank you for subscribing!");
+
+                    // Reset form
+                    this.reset();
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

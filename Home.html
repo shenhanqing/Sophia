@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Haven Bookstore - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for Comfortaa -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- Skip to content link for accessibility -->
+<a href="#main-content" class="skip-link">Skip to content</a>
+
 <!-- Header Section -->
 <header>
     <div class="logo-container">
@@ -23,10 +29,10 @@
 </header>
 
 <!-- Main Content -->
-<main>
+<main id="main-content" class="container">
     <!-- Main Banner -->
     <section id="main-banner">
-        <img src="banner.jpg" alt="Welcome to Book Haven" width="100%">
+        <img src="banner.png" alt="Welcome to Book Haven" width="100%">
     </section>
 
     <!-- Welcome Section -->
@@ -54,13 +60,13 @@
         <h2>New Arrivals</h2>
         <div class="book-container">
             <div class="book-item">
-                <img src="book1.jpg" alt="New Book 1">
+                <img src="book1.png" alt="New Book 1">
                 <h3>Book Title 1</h3>
                 <p>Author Name</p>
                 <p>$19.99</p>
             </div>
             <div class="book-item">
-                <img src="book2.jpg" alt="New Book 2">
+                <img src="book2.png" alt="New Book 2">
                 <h3>Book Title 2</h3>
                 <p>Author Name</p>
                 <p>$24.99</p>
@@ -73,13 +79,13 @@
         <h2>Best Sellers</h2>
         <div class="book-container">
             <div class="book-item">
-                <img src="book3.jpg" alt="Best Seller 1">
+                <img src="book3.png" alt="Best Seller 1">
                 <h3>Book Title 3</h3>
                 <p>Author Name</p>
                 <p>$15.99</p>
             </div>
             <div class="book-item">
-                <img src="book4.jpg" alt="Best Seller 2">
+                <img src="book4.png" alt="Best Seller 2">
                 <h3>Book Title 4</h3>
                 <p>Author Name</p>
                 <p>$21.99</p>
@@ -158,5 +164,40 @@
         </ul>
     </div>
 </footer>
+
+<!-- External JavaScript -->
+<script src="scripts.js"></script>
+
+<!-- Page-specific JavaScript -->
+<script>
+    // Ensure newsletter form works properly on this page
+    document.addEventListener('DOMContentLoaded', function() {
+        // Double-check that the newsletter form is properly bound
+        const newsletterForm = document.getElementById('newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const emailInput = this.querySelector('input[type="email"]');
+                const email = emailInput.value.trim();
+
+                if (email) {
+                    // Store in localStorage
+                    const subscribers = JSON.parse(localStorage.getItem('bookHavenSubscribers')) || [];
+                    if (!subscribers.includes(email)) {
+                        subscribers.push(email);
+                        localStorage.setItem('bookHavenSubscribers', JSON.stringify(subscribers));
+                    }
+
+                    // Show alert
+                    alert("Thank you for subscribing!");
+
+                    // Reset form
+                    this.reset();
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>

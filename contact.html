@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Haven Bookstore - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for Comfortaa -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- Skip to content link for accessibility -->
+<a href="#main-content" class="skip-link">Skip to content</a>
+
 <!-- Header Section -->
 <header>
     <div class="logo-container">
@@ -23,7 +29,7 @@
 </header>
 
 <!-- Main Content -->
-<main>
+<main id="main-content" class="container">
     <h1>Contact Us</h1>
 
     <!-- Contact Form Section -->
@@ -181,68 +187,77 @@
     </div>
 </footer>
 
-<!-- Contact Form Script -->
+<!-- External JavaScript -->
+<script src="scripts.js"></script>
+
+<!-- Page-specific JavaScript -->
 <script>
-    // Get the form element
-    const contactForm = document.getElementById('contact-form');
+    // Ensure contact form and newsletter subscription work properly on this page
+    document.addEventListener('DOMContentLoaded', function() {
+        // Contact form functionality
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
 
-    // Add submit event listener
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault();
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
 
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
+                // Create contact message object
+                const contactMessage = {
+                    name,
+                    email,
+                    subject,
+                    message,
+                    date: new Date().toISOString(),
+                    status: 'new'
+                };
 
-        // Create contact message object
-        const contactMessage = {
-            name,
-            email,
-            subject,
-            message,
-            date: new Date().toISOString(),
-            status: 'new'
-        };
+                // Get existing messages from localStorage or create an empty array
+                const existingMessages = JSON.parse(localStorage.getItem('bookHavenContactMessages')) || [];
 
-        // Get existing messages from localStorage or create an empty array
-        const existingMessages = JSON.parse(localStorage.getItem('bookHavenContactMessages')) || [];
+                // Add new message to array
+                existingMessages.push(contactMessage);
 
-        // Add new message to array
-        existingMessages.push(contactMessage);
+                // Save to localStorage
+                localStorage.setItem('bookHavenContactMessages', JSON.stringify(existingMessages));
 
-        // Save to localStorage
-        localStorage.setItem('bookHavenContactMessages', JSON.stringify(existingMessages));
+                // Show confirmation message
+                alert("Thank you for your message!");
 
-        // Show confirmation message
-        alert('Thank you for contacting us! We will get back to you soon.');
-
-        // Reset form
-        contactForm.reset();
-    });
-
-    // Newsletter subscription in footer
-    const newsletterForm = document.getElementById('newsletter-form');
-    newsletterForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const email = document.getElementById('footer-email').value;
-
-        // Get existing subscribers or create an empty array
-        const subscribers = JSON.parse(localStorage.getItem('bookHavenSubscribers')) || [];
-
-        // Check if already subscribed
-        if (!subscribers.includes(email)) {
-            subscribers.push(email);
-            localStorage.setItem('bookHavenSubscribers', JSON.stringify(subscribers));
+                // Reset form
+                this.reset();
+            });
         }
 
-        // Show confirmation message
-        alert('Thank you for subscribing to our newsletter!');
+        // Newsletter form functionality
+        const newsletterForm = document.getElementById('newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(event) {
+                event.preventDefault();
 
-        // Reset form
-        newsletterForm.reset();
+                const emailInput = this.querySelector('input[type="email"]');
+                const email = emailInput.value.trim();
+
+                if (email) {
+                    // Store in localStorage
+                    const subscribers = JSON.parse(localStorage.getItem('bookHavenSubscribers')) || [];
+                    if (!subscribers.includes(email)) {
+                        subscribers.push(email);
+                        localStorage.setItem('bookHavenSubscribers', JSON.stringify(subscribers));
+                    }
+
+                    // Show alert
+                    alert("Thank you for subscribing!");
+
+                    // Reset form
+                    this.reset();
+                }
+            });
+        }
     });
 </script>
 </body>
