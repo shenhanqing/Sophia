@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven Bookstore - Gallery</title>
+</head>
+<body>
+<!-- Header Section -->
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="Book Haven Logo" id="logo">
+        <h1>Book Haven</h1>
+    </div>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<main>
+    <h1>Book Gallery</h1>
+
+    <!-- View Cart Button -->
+    <button id="view-cart-btn">View Shopping Cart</button>
+
+    <!-- Filter Options -->
+    <div id="filter-section">
+        <span>Filter:</span>
+        <button class="filter-btn" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="fiction">Fiction</button>
+        <button class="filter-btn" data-filter="non-fiction">Non-Fiction</button>
+    </div>
+
+    <!-- Books Gallery -->
+    <section id="books-gallery">
+        <table id="books-table">
+            <thead>
+            <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Book 1 -->
+            <tr>
+                <td><img src="book1.jpg" alt="Book 1" width="100"></td>
+                <td>The Great Adventure</td>
+                <td>John Author</td>
+                <td>Fiction</td>
+                <td>$19.99</td>
+                <td>An exciting adventure story that will keep you on the edge of your seat.</td>
+                <td><button class="add-to-cart" data-id="1" data-title="The Great Adventure" data-price="19.99">Add to Cart</button></td>
+            </tr>
+
+            <!-- Book 2 -->
+            <tr>
+                <td><img src="book2.jpg" alt="Book 2" width="100"></td>
+                <td>Cooking Masterclass</td>
+                <td>Chef Maria</td>
+                <td>Non-Fiction</td>
+                <td>$24.99</td>
+                <td>Learn the secrets of professional cooking with this comprehensive guide.</td>
+                <td><button class="add-to-cart" data-id="2" data-title="Cooking Masterclass" data-price="24.99">Add to Cart</button></td>
+            </tr>
+
+            <!-- Book 3 -->
+            <tr>
+                <td><img src="book3.jpg" alt="Book 3" width="100"></td>
+                <td>Mystery at Midnight</td>
+                <td>Sarah Writer</td>
+                <td>Fiction</td>
+                <td>$18.50</td>
+                <td>A thrilling mystery novel that will keep you guessing until the very end.</td>
+                <td><button class="add-to-cart" data-id="3" data-title="Mystery at Midnight" data-price="18.50">Add to Cart</button></td>
+            </tr>
+
+            <!-- Book 4 -->
+            <tr>
+                <td><img src="book4.jpg" alt="Book 4" width="100"></td>
+                <td>The History of Science</td>
+                <td>Prof. James</td>
+                <td>Non-Fiction</td>
+                <td>$29.99</td>
+                <td>Explore the fascinating journey of scientific discoveries throughout history.</td>
+                <td><button class="add-to-cart" data-id="4" data-title="The History of Science" data-price="29.99">Add to Cart</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<!-- Shopping Cart Modal -->
+<div id="cart-modal" style="display: none;">
+    <div id="cart-content">
+        <h2>Your Shopping Cart</h2>
+        <table id="cart-items">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+            </thead>
+            <tbody id="cart-items-body">
+            <!-- Cart items will be added here dynamically -->
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="3">Total:</td>
+                <td id="cart-total">$0.00</td>
+            </tr>
+            </tfoot>
+        </table>
+        <div id="cart-buttons">
+            <button id="clear-cart">Clear Cart</button>
+            <button id="process-order">Process Order</button>
+            <button id="close-cart">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <div id="newsletter">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form id="newsletter-form">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+    <div id="social-media">
+        <h3>Follow Us</h3>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+        </ul>
+    </div>
+
+    <div id="footer-nav">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="contact-info">
+        <h3>Contact Us</h3>
+        <p>Phone: 123-456-7890</p>
+        <p>Email: info@bookhaven.com</p>
+        <p>&copy; 2025 Book Haven Bookstore</p>
+    </div>
+
+    <div id="hours">
+        <h3>Hours of Operation</h3>
+        <ul>
+            <li>Monday–Friday: 9 a.m. to 8 p.m.</li>
+            <li>Saturday: 10 a.m. to 6 p.m.</li>
+            <li>Sunday: 11 a.m. to 5 p.m.</li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Shopping Cart Script -->
+<script>
+    // Initialize cart from localStorage if it exists
+    let cart = JSON.parse(localStorage.getItem('bookHavenCart')) || [];
+
+    // Add to cart function
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const id = this.getAttribute('data-id');
+            const title = this.getAttribute('data-title');
+            const price = parseFloat(this.getAttribute('data-price'));
+
+            // Check if item already in cart
+            const existingItem = cart.find(item => item.id === id);
+
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({
+                    id,
+                    title,
+                    price,
+                    quantity: 1
+                });
+            }
+
+            // Save to localStorage
+            localStorage.setItem('bookHavenCart', JSON.stringify(cart));
+
+            // Show "Item added" message
+            alert('Item added to cart!');
+        });
+    });
+
+    // View cart function
+    const viewCartBtn = document.getElementById('view-cart-btn');
+    const cartModal = document.getElementById('cart-modal');
+    const closeCartBtn = document.getElementById('close-cart');
+
+    viewCartBtn.addEventListener('click', function() {
+        // Populate cart items
+        const cartItemsBody = document.getElementById('cart-items-body');
+        cartItemsBody.innerHTML = '';
+
+        let total = 0;
+
+        cart.forEach(item => {
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
+
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                    <td>${item.title}</td>
+                    <td>$${item.price.toFixed(2)}</td>
+                    <td>${item.quantity}</td>
+                    <td>$${itemTotal.toFixed(2)}</td>
+                `;
+
+            cartItemsBody.appendChild(row);
+        });
+
+        // Update total
+        document.getElementById('cart-total').textContent = `$${total.toFixed(2)}`;
+
+        // Show modal
+        cartModal.style.display = 'block';
+    });
+
+    // Close cart modal
+    closeCartBtn.addEventListener('click', function() {
+        cartModal.style.display = 'none';
+    });
+
+    // Clear cart function
+    const clearCartBtn = document.getElementById('clear-cart');
+    clearCartBtn.addEventListener('click', function() {
+        cart = [];
+        localStorage.setItem('bookHavenCart', JSON.stringify(cart));
+        document.getElementById('cart-items-body').innerHTML = '';
+        document.getElementById('cart-total').textContent = '$0.00';
+    });
+
+    // Process order function
+    const processOrderBtn = document.getElementById('process-order');
+    processOrderBtn.addEventListener('click', function() {
+        if (cart.length > 0) {
+            // Clear the cart
+            cart = [];
+            localStorage.setItem('bookHavenCart', JSON.stringify(cart));
+
+            // Hide modal
+            cartModal.style.display = 'none';
+
+            // Show thank you message
+            alert('Thank you for your order!');
+        } else {
+            alert('Your cart is empty!');
+        }
+    });
+
+    // Filter functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const bookRows = document.querySelectorAll('#books-table tbody tr');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+
+            bookRows.forEach(row => {
+                const category = row.querySelector('td:nth-child(4)').textContent;
+
+                if (filter === 'all' || category.toLowerCase() === filter.toLowerCase()) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
